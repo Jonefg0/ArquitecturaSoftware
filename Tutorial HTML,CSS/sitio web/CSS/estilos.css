@@ -1,0 +1,190 @@
+/* Jonathan Gonzalez*/
+/*body {
+    background: url(https://png.pngtree.com/thumb_back/fw800/background/20190828/pngtree-water-bubbles-background-designe-image_305402.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color:#fff;
+    margin: 0;
+
+}*/
+img{
+    width: 40%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    box-shadow: black 4px 4px 4px;
+    padding: 2px;
+    border: 1px solid black;
+    }
+
+body{
+    background: white;
+}
+h2,h3 {
+   color:red;
+   font-size: 30px;
+   font-family: Verdana;
+}
+h1{
+    font-size: 50px;
+    color: green;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-shadow: 10px 2px 50px;
+    text-shadow: tomato;
+}
+a{
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px;
+    display: inline-block;
+    background: wheat;
+    box-shadow: teal 0px 4px 2px;
+}
+a:active{
+    background: rgb(238, 130, 130);
+    box-shadow: none;
+}
+a:link{
+    color: teal;
+}
+a:visited{
+    text-decoration: transparent;
+}
+a:hover{
+    color: turquoise;
+    font-size: 25px;
+    background: thistle;
+    box-shadow: teal 0px 1px 1px; ;
+}
+p a{
+    color: orange;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+p{
+    text-decoration: none;
+
+}
+p .enla{
+    color:green;
+}
+
+div{
+    color: indianred;
+    width:300px;
+    height:wrap;
+    margin:20px 50px;
+    background: khaki;
+    padding: 30px;
+    border:2px solid red;
+    float: left;
+}
+
+
+
+aside{
+    
+}
+header{
+    /*background:url(../imagenes/modeli.PNG);*/
+    background-repeat:no-repeat;
+}
+nav{
+    float: left;
+}
+
+/* ######################LISTAS###########################*/
+ul{
+    list-style-type:circle;
+    list-style-position: inside;
+
+}
+ol{
+    /*list-style-type:decimal-leading-zero*/
+    list-style-type: lower-greek;
+    
+
+}
+
+.menu{
+    width: 100%;
+    background: #cccccc;
+    margin: 0px;
+    padding: 0px;
+}
+.menu li{
+    display:inline-block;
+
+}
+.menu li a{
+    padding: 10px 20px;
+    display:inline-block;
+    color: white;
+}
+.menu li :hover{
+    background: red;
+    padding-left: 20px;
+}
+/* ######################TABLAS###########################*/
+
+table{
+    /*border: 1px solid black;*/
+    border-collapse: collapse;
+}
+table td{
+    border: 1px solid black;
+    padding:20px;
+    /*width*/
+}
+table tr:hover{
+    background: brown;
+
+}
+table td:hover{
+    background: red;
+}
+
+/* ######################FORMULARIO###########################*/
+form{
+    width: 25%;
+    border: 1px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+
+label{
+    font-size: 12px;
+    display: block;
+    width: 100%;
+}
+input,textarea{
+    padding:10px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-color: black;
+    font-size: 12px;
+}
+textarea{
+    resize: vertical;
+    max-height: 200px;
+    border-color: black;
+}
+input:focus,textarea:focus{
+    border:4px blue;
+}
+
+input[type="submit"]{
+    margin-bottom: 0px;
+    background: blue;
+    color: white;
+    border: none;
+}
+
+input[type="submit"]:hover{
+    background: blueviolet;
+    cursor: pointer;
+}
+
