@@ -1,0 +1,83 @@
+Docker 
+
+Conceptos previos:
+
+-imagenes:Sistemas
+- Contenedores: Contienen la imagen con el software
+- Puerto: TCP/UDP
+- Volumen: Disco donde se almacenan los datos
+-Docker hub : Contendedor de imagenes para docker
+
+v/s maquina virtual
+- Docker no tiene persistencia de datos.
+
+
+
+Luego de instalar Docker:
+-Test: docker ubuntu bin/echo 'Hello world'
+Terminal : Hello world
+
+-ver imagnes creadas: docker imagnes
+Terminal :imagenes instaladas
+
+-ver contenedores activos: docker ps
+
+
+-Abrir terminal e interactuar : docker run -i -t --rm ubuntu
+
+-salir del volumen: exit
+
+
+EJECUTANDO UN SERVIDOR WEB DESDE Docker
+
+Nos posicionamos en la carpeta /nginx y ejecutamos el siguiente comando
+
+-docker run -d --name "test-mgimx" -p 8080:80 -v $(pwd):/usr/share/nginx/html:ro nginx:latest
+
+
+CREANDO IMAGENES PROPIAS CON Docker
+
+Dockerfile : Archivo de texto de configuración
+
+Nos posicionamos en la carpeta /curl
+
+CURL : envia una consulta web a una página
+
+-ejecutamos : docker build . -t test-curl
+
+crea una imagen con nombre test-curl
+
+ahora lo instanciamos : docker run --rm -v ${pwd}/vol:/data/:rw test-curl
+
+ver los resultados :cat ./vol/results  
+
+DOCKER COMPOSE
+
+Archivos :
+
+requirements.txt : Archivo con softwares,librerias o packetes  necesarias
+Dockerfile: archivo de configuracion
+Docker-compose.yml : Archivo de configuracion para componer nuestro container
+
+-Componer container, En la carpeta flask ejecutamos :docker-compose up  
+
+6. Preguntas
+
+Algunas preguntas para autoevaluar su comprensión del tutorial:
+
+1. ¿Cuál es la diferencia entre una Imágen Docker y un Contenedor Docker?
+2. ¿Cuál es la diferencia entre el archivo Dockerfile y el archivo Docker-compose.yml?
+3. ¿Si utilizo un contenedor que contiene una Base de Datos (Redis, Mysql u otro), cómo y dónde se guardan los datos?
+4. ¿Qué es un *port*? ¿Por qué algunas imágenes requieren hacer un *bind* entre distintos puertos?
+
+## 7. Ejercicio
+
+A partir de la aplicación Python desarrollada la semana pasada ("JamesBot"):
+1. Dockerizar la aplicación para poder despliegar fácilmente en cualquer máquina con el comando **docker run**
+2. Modificar la aplicación "JamesBot". El bot debe ir a búscar de manera aleaoria una frase en una base de datos (MySQL, MariaDB, Mongo u cualquier otro SGBD de su elección) y la escribirá en un canal Slack cada vez que ejecuten su aplicación. (Necesitarán utilizar el comando **docker-compose up** para ejecutar su aplicación)
+
+
+
+
+
+

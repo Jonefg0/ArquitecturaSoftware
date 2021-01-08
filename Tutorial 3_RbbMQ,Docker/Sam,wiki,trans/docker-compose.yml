@@ -1,0 +1,37 @@
+version: '3.6'  
+services:
+  rabbitmq:
+   image: rabbitmq:3-management
+   ports:
+      # The standard AMQP protocol port
+      - '5672:5672'
+      # HTTP management UI
+      - '15672:15672'
+   networks:
+      - network
+   container_name: rabbitmq
+   restart: 'always'
+
+  wiki_sam:
+   build:
+      context: ./wiki_sam
+   container_name: wiki_sam
+   networks:
+      - network
+   environment:
+      - RABBITMQ_HOST=rabbitmq
+   depends_on:
+      - rabbitmq
+
+  reader_sam:
+   build:
+     context: ./reader_sam
+   container_name: reader_sam
+   environment:
+      - RABBITMQ_HOST=rabbitmq
+   depends_on:
+      - rabbitmq   
+   networks:
+      - network
+networks:
+  network: {}
