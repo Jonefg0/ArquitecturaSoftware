@@ -8,8 +8,8 @@ RUN pip install -r /requirements.txt
 
 ENV PYTHONUNBUFFERED=1
 
-WORKDIR /nestor_translate_es_en
+WORKDIR /Sam_traductor
 
-COPY ./nestor_translate_es_en.py /nestor_translate_es_en.py
+COPY ./sam_traduce.py /sam_traduce.py
 
-CMD [ "python", "/nestor_translate_es_en.py" ]
+CMD [ "python", "/sam_traduce.py" ]
